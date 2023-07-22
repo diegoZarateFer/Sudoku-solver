@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Outline&family=Londrina+Solid:wght@300;400&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.boardContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.board {
+  margin: 0 auto;
+  border-collapse: collapse;
+  border-left: 2px solid#000;
+  border-top: 2px solid #000;
+  background: #ccc;
+}
+
+.input-cell {
+  font-family: 'Londrina Solid', cursive;
+  font-weight: 300;
+  width: 50px;
+  height: 50px;
+  font-size: 25px;
+  text-align: center;
+  caret-color: transparent;
+  cursor: default;
+  border: 1px solid #000;
+  color: #111;
+}
+
+.input-cell:focus {
+  outline: none;
+}
+
+.selected {
+  background: #9f0dbc51;
+}
+
+.correct{
+  color: #00f;
+}
+
+.wrong-value {
+  color: #f33;
+}
+
+tr:nth-child(3n) input {
+  border-bottom: 3px solid #000;
+}
+
+td:nth-child(3n) input {
+  border-right: 3px solid #000;
+}
+
+.highlighted {
+  background: #550c6465;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+@media screen and (max-width:500px) {
+  .input-cell {
+    width: 30px;
+    height: 30px;
+    font-size: 15px;
+  }
+}
